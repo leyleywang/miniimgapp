@@ -23,8 +23,17 @@ app.post('/proxy', async (req, res) => {
 });
 app.get('/', async (req, res) => {
     try {
-      console.log('uniapp----')
+      console.log('uniapp----ttt')
       res.json({response:"ok"});
+    } catch (error) {
+      console.error('Error contacting OpenAI:', error);
+      res.status(500).send('Error contacting OpenAI');
+    }
+  });
+app.get('/t', async (req, res) => {
+    try {
+      console.log('uniapp----')
+      res.json({response:"ttt"});
     } catch (error) {
       console.error('Error contacting OpenAI:', error);
       res.status(500).send('Error contacting OpenAI');
