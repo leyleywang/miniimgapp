@@ -21,7 +21,15 @@ app.post('/proxy', async (req, res) => {
     res.status(500).send('Error contacting OpenAI');
   }
 });
-
+app.get('/test', async (req, res) => {
+    try {
+      
+      res.json({response:1});
+    } catch (error) {
+      console.error('Error contacting OpenAI:', error);
+      res.status(500).send('Error contacting OpenAI');
+    }
+  });
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
