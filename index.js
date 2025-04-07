@@ -21,10 +21,10 @@ app.post('/proxy', async (req, res) => {
     res.status(500).send('Error contacting OpenAI');
   }
 });
-app.get('/test', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
       
-      res.json({response:1});
+      res.json({response:"ok"});
     } catch (error) {
       console.error('Error contacting OpenAI:', error);
       res.status(500).send('Error contacting OpenAI');
