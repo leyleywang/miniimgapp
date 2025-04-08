@@ -8,6 +8,7 @@ const OPENAI_API_KEY = 'sk-proj-AzVgaVsED27ebJUAE_FXQwPav1SyooTSJWbURTR0LyHRr3FF
 const OPENAI_API_URL = 'https://api.openai.com/v1/images/generations';  // 或其他你需要的 endpoint
 
 app.post('/proxy', async (req, res) => {
+  console.log('rrrreeeqqq',req)
   try {
     const response = await axios.post(OPENAI_API_URL, req.body, {
       headers: {
