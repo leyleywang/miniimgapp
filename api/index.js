@@ -1,9 +1,9 @@
 const express = require('express');
 const axios = require('axios');
-
+const cors = require('cors');
 const app = express();
 //app.use(express.json());
-
+app.use(cors());
 const OPENAI_API_KEY = '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';  // 替换为你的 OpenAI API 密钥
 const OPENAI_API_URL = 'https://api.openai.com/v1/completions';  // 或其他你需要的 endpoint
 
